@@ -1,0 +1,393 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galería de Productos</title>
+
+    <style>
+
+        /* ===== CONFIGURACIÓN GENERAL ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+        /* ===== ENCABEZADO ===== */
+
+        header {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+
+        /* ===== GALERÍA ===== */
+
+        .galeria {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+
+            display: grid;
+
+            /* 3 columnas en computadora */
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* ===== TARJETAS ===== */
+
+        .producto {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+            transition: 0.3s;
+        }
+        /* ===== EFECTO AL PASAR EL MOUSE ===== */
+
+        .producto:hover {
+            transform: scale(1.04);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+        /* ===== IMÁGENES ===== */
+
+        .producto img {
+            width: 100%;
+            height: 220px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+        /* ===== INFORMACIÓN ===== */
+
+        .contenido {
+            padding: 20px;
+        }
+
+        .contenido h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .contenido p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.5;
+
+            min-height: 68px;
+        }
+        /* ===== PRECIO ===== */
+
+        .precio {
+            display: block;
+
+            color: #6a11cb;
+
+            font-size: 24px;
+            font-weight: bold;
+
+            margin: 15px 0;
+        }
+        /* ===== BOTÓN ===== */
+
+        button {
+            width: 100%;
+
+            padding: 12px;
+
+            border: none;
+            border-radius: 8px;
+
+            background-color: #2575fc;
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #1258c7;
+        }
+        /* ===== PIE DE PÁGINA ===== */
+
+        footer {
+            background-color: #222;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 40px;
+        }
+        /* ===== TABLET ===== */
+
+        @media (max-width: 900px) {
+
+            .galeria {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+        }
+
+
+        /* ===== CELULAR ===== */
+
+        @media (max-width: 600px) {
+
+            .galeria {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .producto img {
+                height: 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ===== ENCABEZADO ===== -->
+
+    <header>
+
+        <h1>🛍️ GALERÍA DE PRODUCTOS</h1>
+
+        <p>
+            Encuentra los mejores productos al mejor precio
+        </p>
+
+    </header>
+    <!-- ===== GALERÍA DE PRODUCTOS ===== -->
+
+    <main class="galeria">
+        <!-- PRODUCTO 1 -->
+
+        <article class="producto">
+
+            <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+                alt="Zapatillas deportivas">
+
+            <div class="contenido">
+
+                <h2>Zapatillas Deportivas</h2>
+
+                <p>
+                    Zapatillas cómodas y modernas, ideales
+                    para hacer deporte y caminar.
+                </p>
+
+                <span class="precio">
+                    S/ 120.00
+                </span>
+
+                <button>
+                    Comprar
+                </button>
+
+            </div>
+
+        </article>
+        <!-- PRODUCTO 2 -->
+
+        <article class="producto">
+
+            <img
+                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500"
+                alt="Reloj moderno">
+
+            <div class="contenido">
+
+                <h2>Reloj Moderno</h2>
+
+                <p>
+                    Elegante reloj para complementar
+                    tu estilo todos los días.
+                </p>
+
+                <span class="precio">
+                    S/ 85.00
+                </span>
+
+                <button>
+                    Comprar
+                </button>
+
+            </div>
+
+        </article>
+        <!-- PRODUCTO 3 -->
+
+        <article class="producto">
+
+            <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+                alt="Audífonos">
+
+            <div class="contenido">
+
+                <h2>Audífonos</h2>
+
+                <p>
+                    Audífonos inalámbricos con excelente
+                    calidad de sonido y batería duradera.
+                </p>
+
+                <span class="precio">
+                    S/ 75.00
+                </span>
+
+                <button>
+                    Comprar
+                </button>
+
+            </div>
+
+        </article>
+        <!-- PRODUCTO 4 -->
+
+        <article class="producto">
+
+            <img
+                src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500"
+                alt="Cámara fotográfica">
+
+            <div class="contenido">
+
+                <h2>Cámara Fotográfica</h2>
+
+                <p>
+                    Cámara compacta para capturar tus
+                    mejores momentos con gran calidad.
+                </p>
+
+                <span class="precio">
+                    S/ 450.00
+                </span>
+
+                <button>
+                    Comprar
+                </button>
+
+            </div>
+
+        </article>
+        <!-- PRODUCTO 5 -->
+
+        <article class="producto">
+
+            <img
+                src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=500"
+                alt="Mochila">
+
+            <div class="contenido">
+
+                <h2>Mochila Casual</h2>
+
+                <p>
+                    Mochila resistente y espaciosa para
+                    estudiar, trabajar o viajar.
+                </p>
+
+                <span class="precio">
+                    S/ 65.00
+                </span>
+
+                <button>
+                    Comprar
+                </button>
+
+            </div>
+
+        </article>
+        <!-- PRODUCTO 6 -->
+
+        <article class="producto">
+
+            <img
+                src="https://rimage.ripley.com.pe/home.ripley/Attachment/WOP/1/2065358794580/full_image-2065358794580">
+
+            <div class="contenido">
+
+                <h2>Smartwatch</h2>
+
+                <p>
+                    Reloj inteligente con funciones deportivas,
+                    notificaciones y monitoreo diario.
+                </p>
+
+                <span class="precio">
+                    S/ 180.00
+                </span>
+
+                <button>
+                    Comprar
+                </button>
+
+            </div>
+
+        </article>
+    </main>
+    <!-- ===== FOOTER ===== -->
+
+    <footer>
+
+        <p>
+            © 2026 - Mi Tienda Online Celia Karina Mamani Ccora| Galería de Productos
+        </p>
+
+    </footer>
+</body>
+</html>
+```
