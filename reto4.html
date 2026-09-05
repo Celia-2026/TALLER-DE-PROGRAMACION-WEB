@@ -1,0 +1,524 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Empresa Digital</title>
+
+
+    <style>
+
+        /* =========================================
+           ESTILOS GENERALES
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+            background-color: #1f2937;
+            color: white;
+
+            padding: 20px 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        /* =========================================
+           NAVEGACIÓN
+        ========================================= */
+
+        nav {
+            background-color: #374151;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            justify-content: center;
+
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            background-color: #2563eb;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+
+            padding: 12px 25px;
+
+            border: none;
+
+            background-color: white;
+
+            color: #2563eb;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           CONTENEDOR
+           AHORA OCUPA TODO EL ANCHO
+        ========================================= */
+
+        .contenedor {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 40px auto;
+
+        }
+
+
+        /* =========================================
+           CONTENIDO PRINCIPAL
+        ========================================= */
+
+        main {
+
+            background-color: white;
+
+            padding: 30px;
+
+            width: 100%;
+
+        }
+
+
+        /* =========================================
+           SERVICIOS
+           3 COLUMNAS EN COMPUTADORA
+        ========================================= */
+
+        .servicios {
+
+            display: flex;
+
+            gap: 20px;
+
+            margin-top: 30px;
+
+        }
+
+
+        .servicio {
+
+            background-color: #eeeeee;
+
+            padding: 25px;
+
+            flex: 1;
+
+            text-align: center;
+
+        }
+
+
+        .servicio h3 {
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .servicio button {
+
+            margin-top: 20px;
+
+            padding: 10px 20px;
+
+            border: none;
+
+            background-color: #2563eb;
+
+            color: white;
+
+            cursor: pointer;
+
+        }
+
+
+        /* =========================================
+           BARRA LATERAL
+           SE OCULTA PORQUE EL CLIENTE YA NO LA QUIERE
+        ========================================= */
+
+        aside {
+
+            display: none;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            background-color: #1f2937;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px;
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE - CELULAR
+           LOS SERVICIOS APARECEN UNO DEBAJO DEL OTRO
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            header {
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                gap: 10px;
+
+            }
+
+
+            nav ul {
+
+                flex-direction: column;
+
+                align-items: center;
+
+                gap: 15px;
+
+            }
+
+
+            .hero {
+
+                padding: 50px 20px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .contenedor {
+
+                width: 95%;
+
+                margin: 20px auto;
+
+            }
+
+
+            main {
+
+                padding: 20px;
+
+            }
+
+
+            /*
+
+                CAMBIO IMPORTANTE:
+
+                En celular los servicios
+
+                aparecen uno debajo del otro.
+
+            */
+
+            .servicios {
+
+                flex-direction: column;
+
+            }
+
+
+            .servicio {
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================= -->
+
+    <header>
+
+        <h2>Empresa Digital</h2>
+
+        <span>📞 999 999 999</span>
+
+    </header>
+
+
+    <!-- =========================================
+         NAVEGACIÓN
+    ========================================= -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#">Servicios</a>
+            </li>
+
+            <li>
+                <a href="#">Nosotros</a>
+            </li>
+
+            <li>
+                <a href="#">Contacto</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================================
+         HERO
+    ========================================= -->
+
+    <section class="hero">
+
+        <h1>
+            Soluciones digitales
+        </h1>
+
+        <p>
+            Ayudamos a las empresas a crecer
+            utilizando tecnología.
+        </p>
+
+        <button>
+            Conocer servicios
+        </button>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTENEDOR
+    ========================================= -->
+
+    <div class="contenedor">
+
+
+        <!-- =====================================
+             CONTENIDO PRINCIPAL
+        ====================================== -->
+
+        <main>
+
+            <h2>
+                Nuestros servicios
+            </h2>
+
+            <p>
+                Conoce nuestras principales
+                soluciones.
+            </p>
+
+
+            <!-- =================================
+                 SERVICIOS
+            ================================== -->
+
+            <div class="servicios">
+
+
+                <article class="servicio">
+
+                    <h3>
+                        Diseño Web
+                    </h3>
+
+                    <p>
+                        Diseñamos sitios web modernos,
+                        atractivos y fáciles de utilizar.
+                    </p>
+
+                    <button>
+                        Ver servicio
+                    </button>
+
+                </article>
+
+
+                <article class="servicio">
+
+                    <h3>
+                        Desarrollo
+                    </h3>
+
+                    <p>
+                        Desarrollamos aplicaciones web
+                        adaptadas a cada empresa.
+                    </p>
+
+                    <button>
+                        Ver servicio
+                    </button>
+
+                </article>
+
+
+                <article class="servicio">
+
+                    <h3>
+                        Marketing Digital
+                    </h3>
+
+                    <p>
+                        Ayudamos a mejorar la presencia
+                        digital de nuestros clientes.
+                    </p>
+
+                    <button>
+                        Ver servicio
+                    </button>
+
+                </article>
+
+
+            </div>
+
+        </main>
+
+
+        <!-- =====================================
+             BARRA LATERAL
+             SE CONSERVA EL CONTENIDO,
+             PERO SE OCULTA CON CSS
+        ====================================== -->
+
+        <aside>
+
+            <h3>
+                Información
+            </h3>
+
+            <br>
+
+            <p>
+                📍 Arequipa
+            </p>
+
+            <br>
+
+            <p>
+                📞 999 999 999
+            </p>
+
+            <br>
+
+            <p>
+                ✉️ contacto@empresa.com
+            </p>
+
+        </aside>
+
+
+    </div>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <h3>
+            Empresa Digital
+        </h3>
+
+        <br>
+
+        <p>
+            © 2026 Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
